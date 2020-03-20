@@ -1,0 +1,1 @@
+genfscon sysfs /devices/platform/goodix_ts.0/gesture/aod_enable         u:object_r:asus_display_proc_exec:s0
