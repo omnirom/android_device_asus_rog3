@@ -39,6 +39,10 @@ static void set(const std::string& path, const T& value) {
     file << value;
 }
 
+FingerprintInscreen::FingerprintInscreen() {
+    this->mGoodixFingerprintDaemon = IGoodixFingerprintDaemon::getService();
+}
+
 Return<void> FingerprintInscreen::onStartEnroll() {
     return Void();
 }
@@ -48,10 +52,14 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
+    this->mGoodixFingerprintDaemon->sendCommand(200001, {},
+                                                [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+        this->mGoodixFingerprintDaemon->sendCommand(200003, {},
+                                                [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
