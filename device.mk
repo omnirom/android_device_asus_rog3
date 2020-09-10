@@ -55,7 +55,6 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdmutils \
     libvulkan \
-    lights.kona \
     memtrack.kona \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
@@ -73,6 +72,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keychars/goodix_ts.kcm:system/usr/keychars/goodix_ts.kcm \
     $(LOCAL_PATH)/keylayout/goodix_ts.kl:system/usr/keylayout/goodix_ts.kl \
     $(LOCAL_PATH)/keylayout/i-rocks_Bluetooth_Keyboard.kl:system/usr/keylayout/i-rocks_Bluetooth_Keyboard.kl
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.obiwan
 
 # Prebuilt
 PRODUCT_COPY_FILES += \

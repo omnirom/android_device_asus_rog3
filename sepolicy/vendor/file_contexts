@@ -39,6 +39,9 @@
 /asusfw(/.*)?                                                                                 u:object_r:factory_file:s0
 /factory(/.*)?                                                                                u:object_r:factory_file:s0
 
+# Lights
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.obiwan                  u:object_r:hal_light_default_exec:s0
+
 # Sensors
 /dev/asusFRGBSensor                                                                           u:object_r:frgb_sensor_device:s0
 /dev/asusLightSensor                                                                          u:object_r:sensors_device:s0
