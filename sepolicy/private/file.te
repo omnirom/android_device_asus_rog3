@@ -1,5 +1,8 @@
 # FOD
 type sysfs_fod, sysfs_type, fs_type;
 
+# Asus proc
+type asus_display_proc_exec, proc_type, sysfs_type, fs_type;
+
 # Vibrator
 type sysfs_awinic, sysfs_type, fs_type;
