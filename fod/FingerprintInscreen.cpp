@@ -22,6 +22,10 @@
 
 #define FOD_ENABLE_PATH "/sys/devices/platform/goodix_ts.0/gesture/aod_enable"
 
+#define GLOBAL_HBM_FOD_MODE "/proc/globalHbm_fod"
+#define GLOBAL_HBM_FOD_ON "1"
+#define GLOBAL_HBM_FOD_OFF "0"
+
 namespace vendor {
 namespace omni {
 namespace biometrics {
@@ -44,8 +48,6 @@ FingerprintInscreen::FingerprintInscreen() {
 }
 
 Return<void> FingerprintInscreen::onStartEnroll() {
-    this->mGoodixFingerprintDaemon->sendCommand(200002, {},
-                                                [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
@@ -56,12 +58,16 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
+	set(GLOBAL_HBM_FOD_MODE, 1);
     this->mGoodixFingerprintDaemon->sendCommand(200001, {},
+                                                [](int, const hidl_vec<signed char>&) {});
+    this->mGoodixFingerprintDaemon->sendCommand(200002, {},
                                                 [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+	set(GLOBAL_HBM_FOD_MODE, 0);
         this->mGoodixFingerprintDaemon->sendCommand(200003, {},
                                                 [](int, const hidl_vec<signed char>&) {});
     return Void();
