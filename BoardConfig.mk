@@ -36,6 +36,9 @@ TARGET_KERNEL_CONFIG := vendor/rog3_defconfig
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/recovery.fstab
+
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
