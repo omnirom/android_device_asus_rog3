@@ -954,32 +954,6 @@ service vendor.ssr_diag /system/vendor/bin/ssr_diag
     group system
     disabled
 
-service hvdcp /system/bin/hvdcp
-    class core
-    user root
-    disabled
-
-on property:persist.usb.hvdcp.detect=true
-    start hvdcp
-
-on property:persist.usb.hvdcp.detect=false
-    stop hvdcp
-
-service charger_monitor /system/bin/charger_monitor
-    user root
-    group root
-    disabled
-
-service qbcharger /charger -m 1
-    disabled
-    oneshot
-
-on property:sys.qbcharger.enable=true
-    start qbcharger
-
-on property:sys.qbcharger.enable=false
-    stop qbcharger
-
 #AS-K SSR SAR and Modem Log Config - Add -c to Send mask cleanup to modem at exit+
 service diag_mdlog_start /system/vendor/bin/diag_mdlog -c -u
     class late_start
