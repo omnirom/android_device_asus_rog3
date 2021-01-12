@@ -21,7 +21,10 @@
 #include <fstream>
 
 #define FOD_ENABLE_PATH "/sys/devices/platform/goodix_ts.0/gesture/aod_enable"
+#define FOD_EVENT_PATH "/proc/driver/fod_event"
 #define LOCAL_HBM_MODE "/proc/localHbm"
+
+#define FOD_WAKEUP_EVENT "33"
 #define LOCAL_HBM_ON "1"
 #define LOCAL_HBM_OFF "0"
 
@@ -72,6 +75,7 @@ Return<void> FingerprintInscreen::onRelease() {
 
 Return<void> FingerprintInscreen::onShowFODView() {
     set(FOD_ENABLE_PATH, 1);
+    set(FOD_WAKEUP_EVENT, FOD_EVENT_PATH);
     return Void();
 }
 
