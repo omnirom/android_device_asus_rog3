@@ -20,6 +20,10 @@
 #include "FingerprintInscreen.h"
 #include <hidl/HidlTransportSupport.h>
 
+#define FOD_ENABLE_PATH "/sys/devices/platform/goodix_ts.0/gesture/aod_enable"
+#define FOD_ENABLE_ON "1"
+#define FOD_ENABLE_OFF "0"
+
 #define FOD_EVENT_PATH "/proc/driver/fod_event"
 #define FOD_WAKEUP_EVENT "33"
 
@@ -67,11 +71,13 @@ Return<void> FingerprintInscreen::onRelease() {
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
+    android::base::WriteStringToFile(FOD_ENABLE_ON, FOD_ENABLE_PATH);
     android::base::WriteStringToFile(FOD_WAKEUP_EVENT, FOD_EVENT_PATH);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
+    android::base::WriteStringToFile(FOD_ENABLE_OFF, FOD_ENABLE_PATH);
     android::base::WriteStringToFile(LOCAL_HBM_OFF, LOCAL_HBM_MODE);
     this->mGoodixFingerprintDaemon->sendCommand(200000, {},
                                                 [](int, const hidl_vec<signed char>&) {});

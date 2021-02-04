@@ -1,2 +1,2 @@
 # Asus proc
-type asus_display_proc_exec, proc_type, fs_type;
+type asus_display_proc_exec, proc_type, sysfs_type, fs_type;
