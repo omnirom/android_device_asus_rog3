@@ -44,6 +44,9 @@ Return<void> FingerprintInscreen::onStartEnroll() {
 }
 
 Return<void> FingerprintInscreen::onFinishEnroll() {
+    android::base::WriteStringToFile(LOCAL_HBM_OFF, LOCAL_HBM_MODE);
+    this->mGoodixFingerprintDaemon->sendCommand(200000, {},
+                                                [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
@@ -69,6 +72,9 @@ Return<void> FingerprintInscreen::onShowFODView() {
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
+    android::base::WriteStringToFile(LOCAL_HBM_OFF, LOCAL_HBM_MODE);
+    this->mGoodixFingerprintDaemon->sendCommand(200000, {},
+                                                [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
