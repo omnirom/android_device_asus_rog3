@@ -8,12 +8,19 @@ etc/hardcore_X2.json
 etc/hardcore_X3.json
 etc/x3_comb.json
 etc/permissions/asus.software.gamewidget.zenui.rog3.xml
+etc/permissions/asus.software.project.ZS661KS.xml
+etc/permissions/asus.software.rog.xml
+etc/permissions/asus.software.sku.WW.xml
+etc/permissions/asus.software.zenui.seven.xml
 etc/permissions/asus.software.zenui.rog.xml
 etc/permissions/asus.software.zenui.xml
 etc/sysconfig/ims-hiddenapi-package-whitelist.xml
 -priv-app/GameBroadcaster/GameBroadcaster.apk
 priv-app/GameBroadcaster/lib/arm64/libJniModule.so
 -priv-app/ROGGameCenter/ROGGameCenter.apk
+-priv-app/PowerSaving2/PowerSaving2.apk
+-priv-app/ROGAirTrigger/ROGAirTrigger.apk
+priv-app/ROGAirTrigger/lib/arm64/libpl_droidsonroids_gif.so
 
 # Audio
 system_ext/etc/cdma_call_conf.xml
