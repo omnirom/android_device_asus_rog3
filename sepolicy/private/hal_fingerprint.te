@@ -1,0 +1,1 @@
+allow hal_fingerprint asus_display_proc_exec:file w_file_perms;
