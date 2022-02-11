@@ -104,6 +104,9 @@ Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
 }
 
 Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
+    android::base::WriteStringToFile(LOCAL_HBM_OFF, LOCAL_HBM_PATH);
+    mGoodixFingerprintDaemon->sendCommand(CMD_LIGHT_AREA_CLOSE, {},
+                                                [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
