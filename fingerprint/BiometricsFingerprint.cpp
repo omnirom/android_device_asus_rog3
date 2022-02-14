@@ -24,6 +24,7 @@
 #include "BiometricsFingerprint.h"
 
 #include <inttypes.h>
+#include <thread>
 #include <unistd.h>
 
 #define CMD_FINGER_DOWN 200001
@@ -61,6 +62,16 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
         ALOGE("Can't open HAL module");
     }
     mGoodixFingerprintDaemon = IGoodixFingerprintDaemon::getService();
+
+    std::thread([this]() {
+        unsigned int cmd;
+
+        while (true) {
+            mCmdQueue.pop(cmd);
+            mGoodixFingerprintDaemon->sendCommand(cmd, {},
+                                                        [](int, const hidl_vec<signed char>&) {});
+        }
+    }).detach();
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -83,19 +94,16 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
-    mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_DOWN, {},
-                                                [](int, const hidl_vec<signed char>&) {});
+    mCmdQueue.push(CMD_FINGER_DOWN);
     android::base::WriteStringToFile(FOD_WAKEUP_EVENT, FOD_EVENT_PATH);
     android::base::WriteStringToFile(LOCAL_HBM_ON, LOCAL_HBM_PATH);
-    mGoodixFingerprintDaemon->sendCommand(CMD_LIGHT_AREA_STABLE, {},
-                                                [](int, const hidl_vec<signed char>&) {});
+    mCmdQueue.push(CMD_LIGHT_AREA_STABLE);
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
     android::base::WriteStringToFile(LOCAL_HBM_OFF, LOCAL_HBM_PATH);
-    mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_UP, {},
-                                                [](int, const hidl_vec<signed char>&) {});
+    mCmdQueue.push(CMD_FINGER_UP);
     return Void();
 }
 
