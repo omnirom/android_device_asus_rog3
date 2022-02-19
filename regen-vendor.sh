@@ -1154,6 +1154,7 @@ VENDOR_SKIP_FILES_COMMON=(
     "lib/android.hardware.sensors@2.0-ScopedWakelock.so"
     "lib64/android.hardware.sensors@2.0-ScopedWakelock.so"
     "lib64/libsensorndkbridge.so"
+    "etc/sensors/hals.conf"
 
     # Sepolicy
     "etc/selinux/plat_pub_versioned.cil"
