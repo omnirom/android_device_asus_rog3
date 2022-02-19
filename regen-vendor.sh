@@ -647,6 +647,9 @@ VENDOR_SKIP_FILES_COMMON=(
     "rfs/msm/slpi/readwrite"
     "rfs/msm/slpi/shared"
 
+    # Sensors
+    "etc/sensors/hals.conf"
+
     # Sepolicy
     "etc/selinux/plat_pub_versioned.cil"
     "etc/selinux/plat_sepolicy_vers.txt"
