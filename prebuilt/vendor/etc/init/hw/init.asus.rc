@@ -30,6 +30,8 @@ on property:vendor.vibrator.boot=1
     
 on post-fs
 on post-fs-data
+# FOD
+    chown system system /sys/devices/platform/goodix_ts.0/fod_pressed
 
     chown shell root /batinfo
     chmod 0775 /batinfo
