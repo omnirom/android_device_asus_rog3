@@ -3,3 +3,6 @@ genfscon proc /driver/fod_event        u:object_r:asus_display_proc_exec:s0
 
 genfscon sysfs /class/leds/vibrator                                            u:object_r:sysfs_awinic:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-3/3-005a/leds/vibrator     u:object_r:sysfs_awinic:s0
+
+genfscon sysfs /devices/platform/goodix_ts.0/fod_pressed                       u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/platform/goodix_ts.0/gesture/fp_wakeup                 u:object_r:vendor_sysfs_sensors:s0
