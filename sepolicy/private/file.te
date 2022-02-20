@@ -3,5 +3,8 @@ type asus_display_proc_exec, proc_type, fs_type;
 
 type vendor_sysfs_kgsl, sysfs_type, fs_type;
 
+# Sensors
+type vendor_sysfs_sensors, sysfs_type, fs_type;
+
 # Vibrator
 type sysfs_awinic, sysfs_type, fs_type;

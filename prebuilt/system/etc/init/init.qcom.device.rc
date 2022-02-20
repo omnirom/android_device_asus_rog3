@@ -5,3 +5,8 @@ service vendor.vibrator-1-0 /system/bin/true
 
 service vendor.qti.vibrator /system/bin/true
     disabled
+
+on post-fs-data
+# FOD
+    chown system system /sys/devices/platform/goodix_ts.0/fod_pressed
+    chown system system /sys/devices/platform/goodix_ts.0/gesture/fp_wakeup
