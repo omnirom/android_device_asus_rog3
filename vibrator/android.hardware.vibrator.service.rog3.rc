@@ -1,3 +1,15 @@
+on post-fs
+    chown system system /sys/class/leds/vibrator/mem_play
+    chown system system /sys/class/leds/vibrator/gain
+    chown system system /sys/class/leds/vibrator/index
+    chown system system /sys/class/leds/vibrator/duration
+    chown system system /sys/class/leds/vibrator/activate
+
+    write /sys/class/leds/vibrator/vmax 28
+
+on property:service.bootanim.exit=0
+    write /sys/class/leds/vibrator/rtp_play_delay "60004 1000"
+
 service system.rog3.vibrator /system_ext/bin/hw/android.hardware.vibrator.service.rog3
     class hal
     user system
