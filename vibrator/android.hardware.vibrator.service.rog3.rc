@@ -1,0 +1,4 @@
+service system.rog3.vibrator /system_ext/bin/hw/android.hardware.vibrator.service.rog3
+    class hal
+    user system
+    group system input
