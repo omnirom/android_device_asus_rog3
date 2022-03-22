@@ -9,4 +9,5 @@ service vendor.qti.vibrator /system/bin/true
 on post-fs-data
 # FOD
     chown system system /sys/devices/platform/goodix_ts.0/fod_pressed
+    chown system system /sys/devices/platform/goodix_ts.0/gesture/dclick
     chown system system /sys/devices/platform/goodix_ts.0/gesture/fp_wakeup
