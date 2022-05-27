@@ -28,6 +28,11 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+    FrameworksResDeviceOverlay \
+    FrameworksResVendorOverlay \
+    SystemUIDeviceOverlay
+
 # Api
 PRODUCT_SHIPPING_API_LEVEL := 29
 
@@ -36,10 +41,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration_ZS661KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration_ZS661KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_volumes_ZS661KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_volumes_ZS661KS.xml
-
-# Frameworks
-PRODUCT_PACKAGES += \
-    FrameworksResOverlay
 
 # Fingerprint
 PRODUCT_PACKAGES += \
