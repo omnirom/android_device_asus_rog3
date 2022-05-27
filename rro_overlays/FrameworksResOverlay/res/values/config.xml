@@ -120,6 +120,8 @@
 
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
+        <item>2</item>
+        <item>4</item>
         <item>6</item>
         <item>8</item>
         <item>11</item>
@@ -149,6 +151,8 @@
 
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <integer-array name="config_screenBrightnessBacklight">
+        <item>1</item>
+        <item>2</item>
         <item>4</item>
         <item>5</item>
         <item>7</item>
