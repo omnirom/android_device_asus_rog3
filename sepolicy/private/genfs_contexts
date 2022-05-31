@@ -1,2 +1,3 @@
-genfscon proc /localHbm                u:object_r:asus_display_proc_exec:s0
-genfscon proc /driver/fod_event        u:object_r:asus_display_proc_exec:s0
+genfscon proc /localHbm                                      u:object_r:asus_display_proc_exec:s0
+
+genfscon sysfs /devices/platform/goodix_ts.0/test_keycode    u:object_r:asus_display_sysfs:s0
