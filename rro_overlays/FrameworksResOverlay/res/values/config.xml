@@ -218,6 +218,4 @@
          config_defaultPeakRefreshRate will act as the default frame rate. -->
     <integer name="config_defaultRefreshRate">144</integer>
 
-    <!-- Show a custom view for FOD -->
-    <bool name="config_usesFOD">true</bool>
 </resources>
