@@ -1,4 +1,5 @@
 # Asus proc
 type asus_display_proc_exec, proc_type, fs_type;
+type asus_display_sysfs, sysfs_type, fs_type;
 
 type vendor_sysfs_kgsl, sysfs_type, fs_type;
