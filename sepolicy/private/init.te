@@ -1,0 +1,2 @@
+allow init sysfs_awinic:lnk_file read;
+allow init sysfs_awinic:file { rw_file_perms setattr };
