@@ -9,6 +9,12 @@ system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so
 # Camera
 system_ext/lib64/libQSEEComAPI_system.so
 
+# Perf
+system_ext/bin/perfservice
+system_ext/etc/init/perfservice.rc
+system_ext/etc/perf/wlc_model.tflite
+system_ext/etc/seccomp_policy/perfservice.policy
+
 # QTI Telephony
 -system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/DynamicDDSService/DynamicDDSService.apk
@@ -94,7 +100,6 @@ system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libseccam.so
-system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.am@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.ims@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.ims@1.1.so
@@ -121,12 +126,42 @@ system_ext/lib64/vendor.qti.hardware.perf@2.0.so
 
 system_ext/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
+# Public Qti files
+system_ext/bin/qspmsvc
+system_ext/etc/init/qspmsvc.rc
+system_ext/lib64/vendor.qti.qspmhal@1.0.so
+system_ext/lib64/libdiag_system.qti.so
+system_ext/lib64/liblistenjni.qti.so
+system_ext/lib64/liblistensoundmodel2.qti.so
+system_ext/lib64/libqape.qti.so
+system_ext/lib64/libqesdk_ndk_platform.qti.so
+system_ext/lib64/libQOC.qti.so
+system_ext/lib64/libthermalclient.qti.so
+system_ext/lib64/libupdateprof.qti.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
+system_ext/lib64/vendor.qti.qesdhal@1.0.so
+system_ext/lib64/vendor.qti.qesdhal@1.1.so
+
+# Qccsys halservice
+system_ext/bin/qccsyshal@1.1-service
+system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.1-service.rc
+system_ext/lib64/libqcc_file_agent_sys.so
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0-halimpl.so
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1-halimpl.so
+system_ext/lib64/hw/vendor.qti.hardware.qccsyshal@1.0-impl.so
+system_ext/lib64/hw/vendor.qti.hardware.qccsyshal@1.1-impl.so
+
 # Secure
 -system_ext/app/com.qualcomm.qti.services.secureui/com.qualcomm.qti.services.secureui.apk
 system_ext/lib64/libsecureuisvc_jni.so
 system_ext/lib64/libsecureui_svcsock_system.so
 system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so
 system_ext/lib64/libcryptfs_hw.so
+
+# Symlink Qti library
+system_ext/etc/permissions/qti_supplicant_interface.xml
 
 # System Helper
 -system_ext/app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk
