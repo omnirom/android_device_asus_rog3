@@ -2,9 +2,9 @@
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 
 # Asus Game
--app/FocusAppListener/FocusAppListener.apk|DA2F850D335ABD24FEF2C6768139C88A4861E449
--app/GameBroadcasterService/GameBroadcasterService.apk|26F6D5951100230AD6897227EBF5C729C3326A4E
--app/HardwareStub/HardwareStub.apk|B5FB22B28D52AA236573D15DDA96774A4D85A262
+-app/FocusAppListener/FocusAppListener.apk
+-app/GameBroadcasterService/GameBroadcasterService.apk
+-app/HardwareStub/HardwareStub.apk
 etc/hardcore_default.json
 etc/hardcore_X1.json
 etc/hardcore_X2.json
@@ -14,13 +14,12 @@ etc/permissions/asus.software.gamewidget.zenui.rog3.xml
 etc/permissions/asus.software.project.ZS661KS.xml
 etc/permissions/asus.software.rog.xml
 etc/permissions/asus.software.sku.WW.xml
-etc/permissions/asus.software.zenui.seven.xml|8814318B445BD3DA664E94A1DDB6E5EB9ACFE239
+etc/permissions/asus.software.zenui.eight.xml
 etc/permissions/asus.software.zenui.rog.xml
 etc/permissions/asus.software.zenui.xml
 etc/sysconfig/ims-hiddenapi-package-whitelist.xml
--priv-app/GameBroadcaster/GameBroadcaster.apk|ED2CAD0E64DC166A81B442E746EF548DFB0E9485
-priv-app/GameBroadcaster/lib/arm64/libJniModule.so|C2482270B6273B674DEAF6C57AAAC1EB7057C8A4
--priv-app/ROGGameCenter/ROGGameCenter.apk|98E140CF6AD7807F021638DD331E8E8E9A7E7B9D
+-priv-app/GameBroadcaster/GameBroadcaster.apk
+-priv-app/ROGGameCenter/ROGGameCenter.apk
 -priv-app/ROGAirTrigger/ROGAirTrigger.apk
 priv-app/ROGAirTrigger/lib/arm64/libpl_droidsonroids_gif.so
 
@@ -32,13 +31,12 @@ system_ext/lib64/libmdsprpc_system.so
 system_ext/lib64/libsdsprpc_system.so
 
 # Battery
-etc/permissions/asus.software.marketapp.xml|751586706D0F5D9DCCA7984658579047F61A0B81
--app/MobileManagerService/MobileManagerService.apk|9348F894B7251FCCC6E7693157C1C8B38001B3E7
--priv-app/MobileManager/MobileManager.apk|FEC9F33CED6D7549739DBC3440CEDAB42A8258FE
-priv-app/MobileManager/lib/arm64/libavast-utils.so|8BF07EE4B0A756093F393DAF33006FD5F70BE515
-priv-app/MobileManager/lib/arm64/libavast-vps-interface.so|7C1C81D6CE5F04FC59FD2F7BB982D0BFCD2BD1D3
--priv-app/PowerSaving2/PowerSaving2.apk|70539A0F165BCFF9C81C7EFA6567102D224ED332
-priv-app/PowerSaving2/lib/arm64/libJniModule.so|B49CF59B1F6EBBFADFDF911F5D17698917AADCBE
+etc/permissions/asus.software.marketapp.xml
+-app/MobileManagerService/MobileManagerService.apk
+-priv-app/MobileManager/MobileManager.apk
+priv-app/MobileManager/lib/arm64/libavast-utils.so
+priv-app/MobileManager/lib/arm64/libavast-vps-interface.so
+-priv-app/PowerSaving2/PowerSaving2.apk
 
 # Bluetooth
 -system_ext/priv-app/aptxals/aptxals.apk
