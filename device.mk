@@ -84,6 +84,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator.service.rog3
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vibrator/init.aw8697.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/init.aw8697.rc
+
 # Vintf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vintf/manifest.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest.xml \
