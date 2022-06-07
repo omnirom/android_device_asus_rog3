@@ -1,0 +1,2 @@
+get_prop(hal_camera, vendor_runtime_prop)
+allow hal_camera vendor_hal_qspmhal_hwservice:hwservice_manager find;
