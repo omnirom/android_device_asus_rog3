@@ -1,0 +1,9 @@
+-keepclasseswithmembers class * {
+    native <methods>;
+}
+
+-keepclassmembers class * implements android.os.Parcelable { 
+static ** CREATOR;
+} 
+
+-keep interface org.omnirom.rogservice.** { *; }
