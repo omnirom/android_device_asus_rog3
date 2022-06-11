@@ -10,6 +10,8 @@ etc/hardcore_X1.json
 etc/hardcore_X2.json
 etc/hardcore_X3.json
 etc/x3_comb.json
+etc/appscaling/app_aspect_ratio_config.xml
+etc/gamednd/game_dnd_policy.xml
 etc/permissions/asus.software.gamewidget.zenui.rog3.xml
 etc/permissions/asus.software.project.ZS661KS.xml
 etc/permissions/asus.software.rog.xml
