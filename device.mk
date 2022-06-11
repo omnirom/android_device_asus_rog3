@@ -72,6 +72,14 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
+# Rog Service
+PRODUCT_PACKAGES += \
+    RogService \
+    RogServiceClass
+
+PRODUCT_BOOT_JARS += \
+    RogServiceClass
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
