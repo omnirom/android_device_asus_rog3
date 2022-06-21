@@ -201,6 +201,7 @@ Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69
 }
 
 Return<RequestStatus> BiometricsFingerprint::postEnroll() {
+    getInstance()->onFingerUp();
     return ErrorFilter(mDevice->post_enroll(mDevice));
 }
 
@@ -209,6 +210,7 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
+    getInstance()->onFingerUp();
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
