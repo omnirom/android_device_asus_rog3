@@ -19,9 +19,10 @@ etc/permissions/asus.software.zenui.rog.xml
 etc/permissions/asus.software.zenui.xml
 etc/sysconfig/ims-hiddenapi-package-whitelist.xml
 -priv-app/GameBroadcaster/GameBroadcaster.apk
--priv-app/ROGGameCenter/ROGGameCenter.apk
 -priv-app/ROGAirTrigger/ROGAirTrigger.apk
 priv-app/ROGAirTrigger/lib/arm64/libpl_droidsonroids_gif.so
+# Moved to vendor/images/asus/rog3 (exceeds GitHub's file size limit of 100.00 MB)
+#-priv-app/ROGGameCenter/ROGGameCenter.apk
 
 # Audio
 system_ext/etc/cdma_call_conf.xml
@@ -58,7 +59,9 @@ lib64/libxditk_arch.so
 lib64/libxditk_ditArchLIB.so
 lib64/libxditk_ditBSP.so
 lib64/libxditk_ditBSP_JNI.so
--priv-app/AsusCameraApp/AsusCameraApp.apk
+
+# Moved to vendor/images/asus/rog3 (exceeds GitHub's file size limit of 100.00 MB)
+#-priv-app/AsusCameraApp/AsusCameraApp.apk
 system_ext/etc/hdr_config/ans_off/ans_config.txt
 system_ext/etc/hdr_config/ans_on/ans_config.txt
 system_ext/etc/hdr_config/main_inv_ls/RPP_BiquadHPF_config.txt

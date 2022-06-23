@@ -93,3 +93,4 @@ $(call inherit-product, device/asus/sm8250-common/common.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/asus/rog3/rog3-vendor.mk)
+$(call inherit-product, vendor/images/asus/rog3/app/rog3-app.mk)
