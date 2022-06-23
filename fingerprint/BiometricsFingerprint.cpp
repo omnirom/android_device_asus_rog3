@@ -308,6 +308,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                 int32_t vendorCode = 0;
                 FingerprintError result = VendorErrorFilter(msg->data.error, &vendorCode);
                 ALOGD("onError(%d)", result);
+                android::base::WriteStringToFile(LOCAL_HBM_OFF, LOCAL_HBM_PATH);
                 if (!thisPtr->mClientCallback->onError(devId, result, vendorCode).isOk()) {
                     ALOGE("failed to invoke fingerprint onError callback");
                 }
