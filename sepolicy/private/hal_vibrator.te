@@ -1,1 +1,0 @@
-allow hal_vibrator sysfs_awinic:file rw_file_perms;

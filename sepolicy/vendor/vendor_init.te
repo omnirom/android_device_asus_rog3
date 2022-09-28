@@ -1,0 +1,13 @@
+allow vendor_init exported_system_prop:property_service set;
+
+# GameCenter
+get_prop(vendor_init, asus_rog_prop)
+set_prop(vendor_init, asus_rog_prop)
+
+# Grip Sensor
+allow vendor_init proc_driver_grip_sensor:file write;
+set_prop(vendor_init, asus_dongle_prop)
+
+# Vibrator
+get_prop(vendor_init, asus_vib_prop)
+set_prop(vendor_init, asus_vib_prop)

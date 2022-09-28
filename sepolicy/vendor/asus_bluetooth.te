@@ -1,0 +1,23 @@
+# Policy for Asus BT HAL service
+type asus_bluetooth, domain;
+type asus_bluetooth_exec, exec_type, vendor_file_type, file_type;
+
+# Started by init
+init_daemon_domain(asus_bluetooth)
+
+dontaudit init asus_bluetooth:process {noatsecure };
+allow init asus_bluetooth_exec:file {read getattr map execute open };
+allow init asus_bluetooth:process {transition };
+allow asus_bluetooth asus_bluetooth_exec:file {read getattr map execute open entrypoint };
+allow init asus_bluetooth:process {siginh rlimitinh };
+allow asus_bluetooth asus_bluetooth_exec:file {map entrypoint };
+allow asus_bluetooth mnt_vendor_file:dir {write add_name search };
+allow asus_bluetooth mnt_vendor_file:file {read write create getattr append open };
+allow asus_bluetooth property_socket:sock_file {write };
+allow asus_bluetooth init:unix_stream_socket {connectto };
+allow shell asus_bluetooth_prop:file {read getattr map open };
+
+set_prop(asus_bluetooth, vendor_asus_prop)
+
+get_prop(asus_bluetooth, asus_bluetooth_prop)
+set_prop(asus_bluetooth, asus_bluetooth_prop)

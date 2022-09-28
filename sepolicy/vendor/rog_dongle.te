@@ -1,0 +1,65 @@
+# Policy for Asus SP HAL service
+type rog_dongle, domain;
+type rog_dongle_exec, exec_type, vendor_file_type, file_type;
+
+# Started by init
+init_daemon_domain(rog_dongle)
+
+dontaudit init rog_dongle:process {noatsecure };
+allow rog_dongle proc_asound:dir {ioctl read getattr lock open watch watch_reads search };
+allow rog_dongle proc_asound:file {ioctl read getattr lock map open watch watch_reads };
+allow rog_dongle vendor_proc_audiod:file {ioctl read getattr lock map open watch watch_reads };
+allow rog_dongle asusfw_file:dir {ioctl read write getattr lock open watch watch_reads add_name remove_name search };
+allow rog_dongle asusfw_file:file {ioctl read write getattr lock append map open watch watch_reads };
+allow rog_dongle asusfw_file:file {create };
+allow rog_dongle vendor_file:dir {ioctl read getattr lock open watch watch_reads search };
+allow rog_dongle vendor_file:file {ioctl read getattr lock map open watch watch_reads };
+allow rog_dongle vendor_file:system {module_load };
+allow rog_dongle vendor_file:file {execute_no_trans };
+allow rog_dongle mnt_vendor_file:dir {ioctl read write getattr lock open watch watch_reads add_name remove_name search };
+allow rog_dongle mnt_vendor_file:file {ioctl read write getattr lock append map open watch watch_reads };
+allow rog_dongle rootfs:dir {ioctl read getattr lock open watch watch_reads search };
+allow rog_dongle rootfs:file {ioctl read getattr lock map open watch watch_reads };
+allow rog_dongle audio_device:dir {ioctl read write getattr lock open watch watch_reads add_name remove_name search };
+allow rog_dongle audio_device:chr_file {ioctl read write getattr lock append map open watch watch_reads };
+allow init rog_dongle_exec:file {read getattr map execute open };
+allow init rog_dongle:process {transition };
+allow rog_dongle rog_dongle_exec:file {read getattr map execute open entrypoint };
+allow init rog_dongle:process {siginh rlimitinh };
+allow rog_dongle init:unix_stream_socket {connectto };
+allow rog_dongle kernel:key {search };
+allow rog_dongle kmsg_device:chr_file {ioctl write getattr open };
+allow rog_dongle vendor_shell_exec:file {read getattr execute_no_trans entrypoint };
+allow rog_dongle vendor_toolbox_exec:file {execute_no_trans };
+allow rog_dongle property_socket:sock_file {write };
+allow rog_dongle rog_dongle:capability {sys_module };
+allow rog_dongle sysfs:file {read write create open };
+allow rog_dongle sysfs:dir {read open };
+allow rog_dongle sysfs:lnk_file {read };
+allow rog_dongle sysfs:file {getattr };
+allow rog_dongle sysfs_leds:dir {search };
+allow rog_dongle sysfs_leds:lnk_file {read };
+allow rog_dongle vendor_sysfs_graphics:file {read write create open };
+allow rog_dongle vendor_sysfs_graphics:dir {search };
+allow rog_dongle vendor_sysfs_usbpd_device:dir {ioctl read getattr lock open watch watch_reads search };
+allow rog_dongle vendor_sysfs_usbpd_device:file {ioctl read getattr lock map open watch watch_reads };
+allow rog_dongle storage_file:dir {search };
+allow rog_dongle storage_file:lnk_file {read };
+allow rog_dongle mnt_user_file:dir {open search };
+allow rog_dongle mnt_user_file:lnk_file {read };
+allow rog_dongle vendor_data_file:dir {write add_name remove_name };
+allow rog_dongle vendor_data_file:file {read write create getattr unlink open };
+allow rog_dongle usb_device:chr_file {ioctl read write getattr open };
+allow rog_dongle usb_device:dir {read open search };
+allow rog_dongle proc:file {create };
+allow rog_dongle proc_modules:file {read getattr open };
+allow rog_dongle hid_device:chr_file {ioctl read write getattr setattr open };
+allow rog_dongle self:netlink_kobject_uevent_socket {read create bind setopt };
+allow rog_dongle socket_device:dir {write lock open add_name remove_name search };
+
+get_prop(rog_dongle, asus_dongle_prop)
+set_prop(rog_dongle, asus_dongle_prop)
+
+get_prop(rog_dongle, exported_system_prop)
+
+set_prop(rog_dongle, ctl_default_prop)

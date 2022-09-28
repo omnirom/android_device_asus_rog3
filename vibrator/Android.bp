@@ -3,7 +3,7 @@ Common_CFlags += ["-Werror"]
 
 cc_binary {
     name: "android.hardware.vibrator.service.rog3",
-    system_ext_specific: true,
+    vendor: true,
     relative_install_path: "hw",
     init_rc: ["android.hardware.vibrator.service.rog3.rc"],
     vintf_fragments: [
