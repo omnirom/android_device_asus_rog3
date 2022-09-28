@@ -1,0 +1,25 @@
+# Asus Bluetooth
+type asus_bluetooth_prop, property_type;
+
+# Audio Dts
+type audio_debug_prop, property_type;
+
+# Aura Sync
+type vendor_aura_prop, property_type;
+
+# Dongle
+type asus_dongle_prop, property_type;
+
+# GameCenter
+type asus_rog_prop , property_type;
+
+# Storage
+type vendor_storage_prop , property_type;
+
+# Touch
+type asus_touch_prop, property_type;
+
+# Vibrator
+type vibrate_control_prop, property_type;
+type asus_vib_prop, property_type;
+

@@ -1,2 +1,0 @@
-allow hal_fingerprint asus_display_proc_exec:file w_file_perms;
-allow hal_fingerprint hal_fingerprint:binder call;

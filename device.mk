@@ -20,10 +20,6 @@
 # product configuration (apps).
 #
 
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
-PRODUCT_TARGET_VNDK_VERSION := 30
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -38,17 +34,13 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 
 # audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration_ZS661KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_policy_configuration_ZS661KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_policy_volumes_ZS661KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_volumes_ZS661KS.xml
+    $(LOCAL_PATH)/audio/audio_policy_configuration_ZS661KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_policy_configuration_ZS661KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_policy_volumes_ZS661KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes_ZS661KS.xml
 
 # Biometrics
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.rog3
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fingerprint/android.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc \
-    $(LOCAL_PATH)/fingerprint/android.hardware.biometrics.fingerprint@2.1-service.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -63,7 +55,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/system,system) \
     $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/root,recovery/root) \
-    $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/system_root,root)
+    $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/system_root,root) \
+    $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/vendor,vendor)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -79,14 +72,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator.service.rog3
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vibrator/init.aw8697.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/init.aw8697.rc
-
-# Vintf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vintf/manifest.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest.xml \
-    $(LOCAL_PATH)/vintf/vendor.qti.hardware.vibrator.service.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
 
 # Inherit from asus sm8250-common
 $(call inherit-product, device/asus/sm8250-common/common.mk)

@@ -28,19 +28,56 @@ DEVICE_PATH := device/asus/rog3
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 #HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/manifest/vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/manifest/framework_manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest/manifest.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/manifest/compatibility_matrix.xml
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/asus/rog3
 TARGET_KERNEL_CONFIG := vendor/rog3_defconfig
 
+# Kernel Modules
+TARGET_MODULE_ALIASES := \
+    adsp_loader_dlkm.ko:audio_adsp_loader.ko \
+    apr_dlkm.ko:audio_apr.ko \
+    bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
+    hdmi_dlkm.ko:audio_hdmi.ko \
+    machine_dlkm.ko:audio_machine_kona.ko \
+    mbhc_dlkm.ko:audio_mbhc.ko \
+    native_dlkm.ko:audio_native.ko \
+    pinctrl_lpi_dlkm.ko:audio_pinctrl_lpi.ko \
+    pinctrl_wcd_dlkm.ko:audio_pinctrl_wcd.ko \
+    platform_dlkm.ko:audio_platform.ko \
+    q6_dlkm.ko:audio_q6.ko \
+    q6_notifier_dlkm.ko:audio_q6_notifier.ko \
+    q6_pdr_dlkm.ko:audio_q6_pdr.ko \
+    rx_macro_dlkm.ko:audio_rx_macro.ko \
+    snd-soc-rt5683.ko:audio_rt5683.ko \
+    snd_event_dlkm.ko:audio_snd_event.ko \
+    stub_dlkm.ko:audio_stub.ko \
+    swr_ctrl_dlkm.ko:audio_swr_ctrl.ko \
+    swr_dlkm.ko:audio_swr.ko \
+    tfa9874_dlkm.ko:audio_tfa9874.ko \
+    tx_macro_dlkm.ko:audio_tx_macro.ko \
+    usf_dlkm.ko:audio_usf.ko \
+    va_macro_dlkm.ko:audio_va_macro.ko \
+    wcd938x_dlkm.ko:audio_wcd938x.ko \
+    wcd938x_slave_dlkm.ko:audio_wcd938x_slave.ko \
+    wcd9xxx_dlkm.ko:audio_wcd9xxx.ko \
+    wcd_core_dlkm.ko:audio_wcd_core.ko \
+    wlan.ko:qca_cld3_qca6390.ko \
+    wsa_macro_dlkm.ko:audio_wsa_macro.ko
+
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2022-06-05
 
 # Sepolicy
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/product/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # inherit from the proprietary version
 -include vendor/asus/rog3/BoardConfigVendor.mk
