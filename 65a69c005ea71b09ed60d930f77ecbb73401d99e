@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a42f984b_9a2f140c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002322
+      },
+      "writtenOn": "2022-09-29T22:13:55Z",
+      "side": 1,
+      "message": "fix this camera issue:\n\n09-29 22:36:15.463 12824 12824 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***\n09-29 22:36:15.463 12824 12824 F DEBUG   : Build fingerprint: \u0027asus/WW_I003D/ASUS_I003_1:12/SKQ1.210821.001/31.0210.0210.243-0:user/release-keys\u0027\n09-29 22:36:15.463 12824 12824 F DEBUG   : Revision: \u00270\u0027\n09-29 22:36:15.463 12824 12824 F DEBUG   : ABI: \u0027arm64\u0027\n09-29 22:36:15.463 12824 12824 F DEBUG   : Timestamp: 2022-09-29 22:36:15.406698401+0200\n09-29 22:36:15.463 12824 12824 F DEBUG   : Process uptime: 0s\n09-29 22:36:15.463 12824 12824 F DEBUG   : Cmdline: /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64\n09-29 22:36:15.463 12824 12824 F DEBUG   : pid: 12718, tid: 12718, name: android.hardwar  \u003e\u003e\u003e /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64 \u003c\u003c\u003c\n09-29 22:36:15.463 12824 12824 F DEBUG   : uid: 1047\n09-29 22:36:15.463 12824 12824 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------\n09-29 22:36:15.463 12824 12824 F DEBUG   : Abort message: \u0027Binder threadpool cannot be shrunk after starting\u0027",
+      "revId": "65a69c005ea71b09ed60d930f77ecbb73401d99e",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55"
+    }
+  ]
+}
