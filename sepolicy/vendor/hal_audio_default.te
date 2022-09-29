@@ -4,3 +4,9 @@ set_prop(hal_audio_default, audio_debug_prop)
 allow hal_audio_default factory_file:dir {ioctl read getattr lock open watch watch_reads search };
 allow hal_audio_default factory_file:file {ioctl read getattr lock map open watch watch_reads };
 allow hal_audio_default factory_file:lnk_file {ioctl read getattr lock map open watch watch_reads };
+
+allow hal_audio_default sysfs_vibrator:file rw_file_perms;
+allow hal_audio_default sysfs_vibrator:dir search;
+allow hal_audio_default sysfs_vibrator:lnk_file read;
+
+set_prop(hal_audio_default, asus_touch_prop)

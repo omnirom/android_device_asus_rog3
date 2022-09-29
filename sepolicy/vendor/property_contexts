@@ -1,15 +1,10 @@
 # Asus Audio
-vendor.audio.calibration.spk                                u:object_r:asus_dongle_prop:s0
-vendor.audio.calibration.rcv                                u:object_r:asus_dongle_prop:s0
-vendor.audio.calibration.spk.value                          u:object_r:asus_dongle_prop:s0
-vendor.audio.calibration.rcv.value                          u:object_r:asus_dongle_prop:s0
-vendor.audio.calibration.value.range                        u:object_r:asus_dongle_prop:s0
+vendor.audio.calibration.                                   u:object_r:asus_dongle_prop:s0
 vendor.asus.audiocalibration                                u:object_r:exported_system_prop:s0
 persist.vendor.asus.vendor_audiocalibration                 u:object_r:system_prop:s0
 
 # Asus Sp
 ro.vendor.tc.qkey                                           u:object_r:vendor_asus_sp_prop:s0
-vendor.asus.fan.mic                                         u:object_r:exported_system_prop:s0
 persist.vendor.asus.foregroundapp                           u:object_r:exported_system_prop:s0
 vendor.asus.aura.CSCmode                                    u:object_r:system_prop:s0
 vendor.asus.dis_flash_light                                 u:object_r:system_prop:s0
@@ -44,6 +39,7 @@ vendor.wlan.sta.band.wlan1                                  u:object_r:log_prop:
 vendor.wlan.sta.freq                                        u:object_r:log_prop:s0
 vendor.use.audio.eu.parameter                               u:object_r:exported_system_prop:s0
 vendor.asus.donglestate_GV_PD                               u:object_r:system_prop:s0
+
 # Aura Sync
 vendor.asusfw.phone.aura_fwver                              u:object_r:vendor_aura_prop:s0
 vendor.phone.aura_fwupdate                                  u:object_r:vendor_aura_prop:s0
@@ -53,37 +49,38 @@ ro.vendor.btmac                                             u:object_r:asus_blue
 vendor.bt.version.driver                                    u:object_r:asus_bluetooth_prop:s0
 vendor.bluetooth.status                                     u:object_r:log_prop:s0
 
+# Display
+vendor.asus.dfps                                            u:object_r:vendor_dfps_prop:s0
+vendor.asus.rfps                                            u:object_r:vendor_display_prop:s0
+persist.vendor.asus.fps.eng                                 u:object_r:vendor_display_prop:s0
+
 # Dongle
+vendor.deeo.system.                                         u:object_r:system_prop:s0
 persist.vendor.asus.audbg_station                           u:object_r:asus_dongle_prop:s0
 vendor.asus.accy.                                           u:object_r:asus_dongle_prop:s0
 vendor.asus.accy_gen                                        u:object_r:asus_dongle_prop:s0
 vendor.asus.aura.screenoff                                  u:object_r:asus_dongle_prop:s0
-vendor.asus.dongletype                                      u:object_r:asus_dongle_prop:s0
+vendor.asus.donglechmod                                     u:object_r:asus_dongle_prop:s0
 vendor.asus.dongleevent                                     u:object_r:asus_dongle_prop:s0
+vendor.asus.dongletype                                      u:object_r:asus_dongle_prop:s0
 vendor.asus.dt.ac_power                                     u:object_r:asus_dongle_prop:s0
 vendor.asus.ec_i2c_trigger                                  u:object_r:asus_dongle_prop:s0
 vendor.asus.foregroundapp                                   u:object_r:asus_dongle_prop:s0
 vendor.asus.gamepad.                                        u:object_r:asus_dongle_prop:s0
-vendor.asus.usb.                                            u:object_r:asus_dongle_prop:s0
+vendor.asus.usb.debug                                       u:object_r:asus_dongle_prop:s0
+vendor.asus.usb.pre_dongletype                              u:object_r:asus_dongle_prop:s0
 vendor.asus.station.                                        u:object_r:asus_dongle_prop:s0
 vendor.asus.surfaceflingercall                              u:object_r:asus_dongle_prop:s0
-vendor.asusfw.gamepad.                                      u:object_r:asus_dongle_prop:s0
-vendor.asusfw.gamepad3.                                     u:object_r:asus_dongle_prop:s0
-vendor.asusfw.station.                                      u:object_r:asus_dongle_prop:s0
-vendor.asusfw.station2.ec_fwver                             u:object_r:asus_dongle_prop:s0
-vendor.asusfw.station3.ec_fwver                             u:object_r:asus_dongle_prop:s0
-vendor.asusfw.dt.                                           u:object_r:asus_dongle_prop:s0
-vendor.asusfw.inbox.aura_fwver                              u:object_r:asus_dongle_prop:s0
+vendor.asus.tmpVersion                                      u:object_r:asus_dongle_prop:s0
+vendor.asusfw.                                              u:object_r:asus_dongle_prop:s0
 vendor.aura.donglechmod                                     u:object_r:asus_dongle_prop:s0
+vendor.deeo.vendor.                                         u:object_r:asus_dongle_prop:s0
 vendor.dt.                                                  u:object_r:asus_dongle_prop:s0
 vendor.ec_i2c.donglechmod                                   u:object_r:asus_dongle_prop:s0
 vendor.gamepad.                                             u:object_r:asus_dongle_prop:s0
 vendor.gamepad3.                                            u:object_r:asus_dongle_prop:s0
-vendor.inbox.aura_fwver                                     u:object_r:asus_dongle_prop:s0
-vendor.inbox.aura_fwupdate                                  u:object_r:asus_dongle_prop:s0
-vendor.oem.asus.inboxid                                     u:object_r:asus_dongle_prop:s0
-vendor.oem.asus.stationid                                   u:object_r:asus_dongle_prop:s0
-vendor.oem.asus.dtid                                        u:object_r:asus_dongle_prop:s0
+vendor.inbox.                                               u:object_r:asus_dongle_prop:s0
+vendor.oem.asus.                                            u:object_r:asus_dongle_prop:s0
 vendor.station.                                             u:object_r:asus_dongle_prop:s0
 vendor.station2.ec_fwver                                    u:object_r:asus_dongle_prop:s0
 vendor.station3.ec_fwver                                    u:object_r:asus_dongle_prop:s0
@@ -105,10 +102,17 @@ vendor.airtrigger.fw.version                                u:object_r:system_pr
 vendor.airtrigger.fw.result                                 u:object_r:system_prop:s0
 vendor.grip.                                                u:object_r:vendor_thermal_prop:s0
 
+# Sensor
+vendor.proximity.status                                     u:object_r:vendor_asus_prop:s0
+
+# Storage
+ro.vendor.atd.platform                                      u:object_r:vendor_asus_prop:s0 
+
 # Thermal
 persist.vendor.asus.micfansettings                          u:object_r:asus_dongle_prop:s0
 persist.vendor.asus.tempfan                                 u:object_r:asus_dongle_prop:s0
 persist.vendor.asus.userfan                                 u:object_r:asus_dongle_prop:s0
+vendor.asus.fan.mic                                         u:object_r:asus_dongle_prop:s0
 vendor.asus.thermalfan                                      u:object_r:asus_dongle_prop:s0
 vendor.fan.rpm                                              u:object_r:asus_dongle_prop:s0
 
@@ -120,6 +124,13 @@ vendor.screen.rotation                                      u:object_r:system_pr
 vendor.touch.version.driver                                 u:object_r:vendor_asus_prop:s0
 vendor.goodix.sensor.status                                 u:object_r:vendor_asus_prop:s0
 
+# Usb
+persist.vendor.asus.usb.diag                                u:object_r:asus_usb_prop:s0
+vendor.asus.usb.diag                                        u:object_r:asus_usb_prop:s0
+vendor.asus.usb.speed                                       u:object_r:system_prop:s0
+
 # Vibrator
 vendor.asus.boot.vib                                        u:object_r:asus_vib_prop:s0
 persist.vendor.disable.vib                                  u:object_r:asus_vib_prop:s0
+vendor.vibrator.boot                                        u:object_r:vendor_asus_prop:s0
+vendor.vibrator.cali                                        u:object_r:vendor_asus_prop:s0

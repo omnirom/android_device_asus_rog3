@@ -6,7 +6,11 @@ set_prop(vendor_init, asus_rog_prop)
 
 # Grip Sensor
 allow vendor_init proc_driver_grip_sensor:file write;
+allow vendor_init asus_touch_prop:file { read getattr map open };
 set_prop(vendor_init, asus_dongle_prop)
+
+# Usb
+get_prop(vendor_init, asus_usb_prop)
 
 # Vibrator
 get_prop(vendor_init, asus_vib_prop)

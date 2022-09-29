@@ -5,11 +5,18 @@ allow system_app hal_airtrigger_hwservice:hwservice_manager find;
 # Asus Bt
 get_prop(system_app, asus_bluetooth_prop)
 
+# Display
+get_prop(system_app, vendor_dfps_prop)
+
 # GameCenter
 get_prop(system_app, asus_rog_prop)
+allow system_app sysfs_tencent:lnk_file read;
+allow system_app sysfs_tencent:file rw_file_perms;
+allow system_app sysfs_tencent:dir search;
 
 # Grip Sensor
 allow system_app proc_driver_grip_sensor:file { open read write };
+allow system_app sysfs_touch:file { getattr open write};
 
 get_prop(system_app, asus_dongle_prop)
 get_prop(system_app, vendor_asus_sp_prop)
@@ -21,3 +28,7 @@ r_dir_file(system_app, factory_file)
 # Pixelworks
 allow system_app asus_display_proc_exec:file rw_file_perms;
 hal_client_domain(system_app, hal_display_iris)
+
+# Usb
+get_prop(system_app, asus_usb_prop)
+set_prop(system_app, asus_usb_prop)
