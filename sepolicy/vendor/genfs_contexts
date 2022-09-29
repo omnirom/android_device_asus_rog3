@@ -14,17 +14,25 @@ genfscon proc /driver/disable_fod                                       u:object
 # Audio
 genfscon proc /driver/audio_debug                                       u:object_r:proc_asound:s0
 
+# Battery
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-6/6-004e/tcpc/type_c_port0/pd_test        u:object_r:vendor_sysfs_battery_supply:s0 
+
 # Display
 genfscon proc /alpm_mode                                                u:object_r:asus_display_proc_exec:s0
 genfscon proc /dim_mode                                                 u:object_r:asus_display_proc_exec:s0
+genfscon proc /driver/lcd_fps                                           u:object_r:asus_display_proc_exec:s0
 genfscon proc /globalHbm                                                u:object_r:asus_display_proc_exec:s0
 genfscon proc /hbm_mode                                                 u:object_r:asus_display_proc_exec:s0
+genfscon proc /lcd_brightness                                           u:object_r:asus_display_proc_exec:s0
+genfscon proc /lcd_dimming_speed                                        u:object_r:asus_display_proc_exec:s0
 genfscon proc /lcd_stage                                                u:object_r:asus_display_proc_exec:s0
 genfscon proc /lcd_unique_id                                            u:object_r:asus_display_proc_exec:s0
+genfscon proc /localHbm                                                 u:object_r:asus_display_proc_exec:s0
+
 genfscon sysfs /devices/platform/soc/soc:ec_hid/                        u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /class/ec_hid/                                           u:object_r:vendor_sysfs_graphics:s0
 
-# Dongle 
+# Dongle
 genfscon sysfs /devices/platform/goodix_ts.0/dongle_state               u:object_r:asus_dongle_path:s0
 genfscon sysfs /devices/platform/goodix_ts.0/load_station_cfg           u:object_r:asus_dongle_path:s0
 
@@ -118,6 +126,9 @@ genfscon proc /driver/grip_swipe_en             u:object_r:proc_driver_grip_sens
 genfscon proc /driver/grip_swipe_v              u:object_r:proc_driver_grip_sensor:s0
 genfscon proc /driver/grip_tap_en               u:object_r:proc_driver_grip_sensor:s0
 genfscon proc /driver/grip_en                   u:object_r:proc_driver_grip_sensor:s0
+
+# Vibrator
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-3/3-005a                                                                          u:object_r:sysfs_vibrator:s0
 
 # Wakeup
 genfscon sysfs /devices/virtual/diag/diag/wakeup                                                                                      u:object_r:sysfs_wakeup:s0

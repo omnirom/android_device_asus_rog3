@@ -7,6 +7,9 @@ type asus_dongle_path , fs_type, sysfs_type;
 # Grip Sensor
 type proc_driver_grip_sensor, fs_type, proc_type;
 
+# Vibrator
+type sysfs_awinic, sysfs_type, fs_type;
+
 # Touch
 type sysfs_touch, fs_type, sysfs_type;
 

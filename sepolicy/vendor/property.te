@@ -20,6 +20,5 @@ type vendor_storage_prop , property_type;
 type asus_touch_prop, property_type;
 
 # Vibrator
-type vibrate_control_prop, property_type;
 type asus_vib_prop, property_type;
 

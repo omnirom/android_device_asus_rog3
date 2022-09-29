@@ -10,6 +10,7 @@ get_prop(system_app, asus_rog_prop)
 
 # Grip Sensor
 allow system_app proc_driver_grip_sensor:file { open read write };
+allow system_app sysfs_touch:file rw_file_perms;
 
 get_prop(system_app, asus_dongle_prop)
 get_prop(system_app, vendor_asus_sp_prop)

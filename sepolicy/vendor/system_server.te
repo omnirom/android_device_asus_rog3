@@ -8,3 +8,7 @@ get_prop(system_server, asus_dongle_prop)
 
 # GameCenter
 get_prop(system_server, asus_rog_prop)
+
+# Grip
+allow system_server GripCalService:fifo_file rw_file_perms;
+allow system_server GripCalService:fd use;

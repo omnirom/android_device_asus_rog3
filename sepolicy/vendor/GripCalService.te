@@ -1,0 +1,17 @@
+type GripCalService, domain;
+type GripCalService_exec, exec_type, vendor_file_type, file_type;
+
+# Started by init
+init_daemon_domain(GripCalService)
+
+binder_call(GripCalService, system_server)
+
+allow GripCalService self:socket ioctl;
+allowxperm GripCalService self:socket ioctl msm_sock_ipc_ioctls;
+allow GripCalService system_server:fd use;
+#allow GripCalService property_socket:sock_file w_file_perms;
+allow GripCalService init:unix_stream_socket connectto;
+allow GripCalService GripCalService:capability2 syslog;
+allow GripCalService GripCalService:capability sys_admin;
+allow GripCalService kernel:system syslog_mod;
+allow GripCalService kmsg_device:chr_file rw_file_perms;

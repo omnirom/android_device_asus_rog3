@@ -44,6 +44,7 @@ vendor.wlan.sta.band.wlan1                                  u:object_r:log_prop:
 vendor.wlan.sta.freq                                        u:object_r:log_prop:s0
 vendor.use.audio.eu.parameter                               u:object_r:exported_system_prop:s0
 vendor.asus.donglestate_GV_PD                               u:object_r:system_prop:s0
+
 # Aura Sync
 vendor.asusfw.phone.aura_fwver                              u:object_r:vendor_aura_prop:s0
 vendor.phone.aura_fwupdate                                  u:object_r:vendor_aura_prop:s0
@@ -105,6 +106,12 @@ vendor.airtrigger.fw.version                                u:object_r:system_pr
 vendor.airtrigger.fw.result                                 u:object_r:system_prop:s0
 vendor.grip.                                                u:object_r:vendor_thermal_prop:s0
 
+# Sensor
+vendor.proximity.status                                     u:object_r:vendor_asus_prop:s0
+
+# Storage
+ro.vendor.atd.platform                                      u:object_r:vendor_asus_prop:s0 
+
 # Thermal
 persist.vendor.asus.micfansettings                          u:object_r:asus_dongle_prop:s0
 persist.vendor.asus.tempfan                                 u:object_r:asus_dongle_prop:s0
@@ -123,3 +130,5 @@ vendor.goodix.sensor.status                                 u:object_r:vendor_as
 # Vibrator
 vendor.asus.boot.vib                                        u:object_r:asus_vib_prop:s0
 persist.vendor.disable.vib                                  u:object_r:asus_vib_prop:s0
+vendor.vibrator.boot                                        u:object_r:vendor_asus_prop:s0
+vendor.vibrator.cali                                        u:object_r:vendor_asus_prop:s0
