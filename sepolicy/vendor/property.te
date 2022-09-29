@@ -7,6 +7,9 @@ type audio_debug_prop, property_type;
 # Aura Sync
 type vendor_aura_prop, property_type;
 
+# Display
+type vendor_dfps_prop, property_type;
+
 # Dongle
 type asus_dongle_prop, property_type;
 
@@ -19,7 +22,9 @@ type vendor_storage_prop , property_type;
 # Touch
 type asus_touch_prop, property_type;
 
+# Usb
+type asus_usb_prop, property_type, extended_core_property_type;
+
 # Vibrator
-type vibrate_control_prop, property_type;
 type asus_vib_prop, property_type;
 

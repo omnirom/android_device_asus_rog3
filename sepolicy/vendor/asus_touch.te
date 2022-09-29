@@ -20,19 +20,17 @@ allow asus_touch sysfs_leds:dir { search };
 allow asus_touch sysfs_leds:lnk_file { read };
 allow asus_touch factory_file:file { read open };
 allow asus_touch factory_file:dir { search };
-allow asus_touch sysfs:file { read write open };
+allow asus_touch sysfs:file rw_file_perms;
 allow asus_touch vendor_toolbox_exec:file { execute_no_trans };
 allow asus_touch asus_touch:capability { sys_module };
 allow asus_touch vendor_file:system { module_load };
 allow asus_touch kernel:key { search };
-allow asus_touch kmsg_device:chr_file { write append open };
-allow asus_touch property_socket:sock_file { write };
+allow asus_touch kmsg_device:chr_file rw_file_perms;
+allow asus_touch property_socket:sock_file write;
 allow asus_touch init:unix_stream_socket { connectto };
-allow asus_touch asus_touch_prop:file { read getattr map open };
-allow asus_touch vendor_default_prop:file { read getattr map open };
-allow asus_touch vendor_asus_prop:file { read getattr map open };
-allow asus_touch sysfs_touch:file { write open };
-allow vendor_init asus_touch_prop:file { read getattr map open };
-allow priv_app asus_touch_prop:file { read getattr map open };
+allow asus_touch sysfs_touch:file  { write open };
 
-set_prop(hal_audio_default, asus_touch_prop)
+get_prop(asus_touch, asus_touch_prop)
+get_prop(asus_touch, exported_system_prop)
+get_prop(asus_touch, vendor_asus_prop)
+get_prop(asus_touch, vendor_default_prop)

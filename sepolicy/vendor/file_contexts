@@ -1,5 +1,8 @@
-# Airtrigger
+# Airtrigger & Grip
 /(vendor|system/vendor)/bin/hw/vendor\.ims\.airtrigger@[0-9]\.[0-9]-service                   u:object_r:hal_airtrigger_default_exec:s0
+/(vendor|system/vendor)/bin/grip_cal.sh                                                       u:object_r:GripCalService_exec:s0
+/(vendor|system/vendor)/bin/grip_fpc_check.sh                                                 u:object_r:vendor_thermal-engine_exec:s0
+/(vendor|system/vendor)/bin/init.asus.thermal_conf.sh                                         u:object_r:vendor_thermal-engine_exec:s0
 
 # Asus Audio
 /(vendor|system/vendor)/bin/audio_codec_status.sh                                             u:object_r:audio_debug_exec:s0
@@ -16,8 +19,17 @@
 # Asus sp stuff
 /(vendor|system/vendor)/bin/ssn                                                               u:object_r:asus_sp_exec:s0
 
+# AuraLight
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.auralight@1\.0-service                  u:object_r:hal_light_default_exec:s0
+
 # Bluetooth
 /(vendor|system/vendor)/bin/qcfwver                                                           u:object_r:asus_bluetooth_exec:s0
+
+# Game
+/sys/class/game_mode(/.*)?                                                                    u:object_r:sysfs_tencent:s0
+/sys/devices/virtual/game_mode(/.*)?                                                          u:object_r:sysfs_tencent:s0
+/sys/kernel/debug/ufshcd0/tx_Mbps                                                             u:object_r:sysfs_tencent:s0
+/sys/kernel/debug/ufshcd0/rx_Mbps                                                             u:object_r:sysfs_tencent:s0
 
 # Hid
 /dev/hidraw.*                                                                                 u:object_r:hid_device:s0
@@ -40,10 +52,6 @@
 /sys/devices/platform/goodix_ts.0/game_settings                                               u:object_r:sysfs_touch:s0
 /sys/devices/platform/goodix_ts.0/edge_settings                                               u:object_r:sysfs_touch:s0
 /sys/devices/platform/goodix_ts.0/FP_status                                                   u:object_r:sysfs_touch:s0
-
-/(vendor|system/vendor)/bin/init.asus.gamemode.sh                                             u:object_r:asus_touch_exec:s0
-/(vendor|system/vendor)/bin/init.asus.rotation.sh                                             u:object_r:asus_touch_exec:s0
-/(vendor|system/vendor)/bin/dongle_state.sh                                                   u:object_r:asus_touch_exec:s0
 /(vendor|system/vendor)/bin/touch_cfg.sh                                                      u:object_r:asus_touch_exec:s0
 
 # UDFPS
@@ -53,10 +61,7 @@
 /(vendor|system/vendor)/bin/ecUeventd                                                         u:object_r:ec_ueventd_exec:s0
 
 # Vibrator
-/(vendor|system/vendor)/bin/init.asus.boot_vibrate.sh                                         u:object_r:boot_vibrate_exec:s0
-
-/sys/dongwoon_haptic_drv(/.*)?                                                                u:object_r:sysfs_vibrator:s0
-/sys/asus_vib_ctrl(/.*)?                                                                      u:object_r:sysfs_vibrator:s0
 /sys/class/leds/vibrator(/.*)?                                                                u:object_r:sysfs_vibrator:s0
-/sys/devices/platform/soc/a8c000.i2c/i2c-5/5-0059/leds/vibrator(/.*)?                         u:object_r:sysfs_vibrator:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator\.service\.rog3                 u:object_r:hal_vibrator_default_exec:s0
+/sys/devices/platform/soc/990000\.i2c/i2c-3/3-005b/leds/vibrator(/.*)?                        u:object_r:sysfs_vibrator:s0
+/sys/devices/platform/soc/990000\.i2c/i2c-3/3-005a/leds/vibrator(/.*)?                        u:object_r:sysfs_vibrator:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator\.service\.rog3                     u:object_r:hal_vibrator_default_exec:s0
