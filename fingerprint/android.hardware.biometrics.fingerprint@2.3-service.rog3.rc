@@ -1,6 +1,7 @@
 on init
     # Goodix fingerprint
     chown system system /dev/goodix_fp
+    chown system system /sys/devices/platform/goodix_ts.0/test_keycode
 
 service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.rog3
     # "class hal" causes a race condition on some devices due to files created
