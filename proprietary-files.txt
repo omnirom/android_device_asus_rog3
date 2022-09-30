@@ -10,6 +10,17 @@ etc/hardcore_X1.json
 etc/hardcore_X2.json
 etc/hardcore_X3.json
 etc/x3_comb.json
+etc/sys_bat.json
+etc/sys_comb.json
+etc/sys_comb_high.json
+etc/sys_comb_low.json
+etc/sys_comb_medium.json
+etc/sys_dur.json
+etc/sys_dyna.json
+etc/sys_exp.json
+etc/sys_perf.json
+etc/sys_X2.json
+etc/sys_XPlus.json
 etc/permissions/asus.software.gamewidget.zenui.rog3.xml
 etc/permissions/asus.software.project.ZS661KS.xml
 etc/permissions/asus.software.rog.xml
@@ -37,7 +48,7 @@ etc/permissions/asus.software.marketapp.xml
 -priv-app/MobileManager/MobileManager.apk
 priv-app/MobileManager/lib/arm64/libavast-utils.so
 priv-app/MobileManager/lib/arm64/libavast-vps-interface.so
--priv-app/PowerSaving2/PowerSaving2.apk
+#-priv-app/PowerSaving2/PowerSaving2.apk
 
 # Bluetooth
 -system_ext/app/aptxacu/aptxacu.apk
