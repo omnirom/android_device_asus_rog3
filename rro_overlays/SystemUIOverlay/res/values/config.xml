@@ -28,6 +28,6 @@
     <integer name="config_udfps_hbm_type">1</integer>
 
     <!-- The radius of the enrollment progress bar, in dp -->
-    <integer name="config_udfpsEnrollProgressBar" translatable="false">126</integer>
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">121</integer>
 
 </resources>
