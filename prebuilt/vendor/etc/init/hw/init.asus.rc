@@ -315,8 +315,8 @@ chown system shell /data/data/cap2_status
 on early-boot
 
 on boot
-   insmod /vendor/lib/modules/texfat.ko
-   insmod /vendor/lib/modules/tntfs.ko
+   #insmod /vendor/lib/modules/texfat.ko
+   #insmod /vendor/lib/modules/tntfs.ko
 
 # BT A2DP offload mode property
 setprop persist.bluetooth.a2dp_offload.disabled false
