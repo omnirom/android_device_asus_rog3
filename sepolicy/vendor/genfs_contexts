@@ -36,6 +36,10 @@ genfscon sysfs /class/ec_hid/                                           u:object
 genfscon sysfs /devices/platform/goodix_ts.0/dongle_state               u:object_r:asus_dongle_path:s0
 genfscon sysfs /devices/platform/goodix_ts.0/load_station_cfg           u:object_r:asus_dongle_path:s0
 
+# Fingerprint
+genfscon sysfs /devices/platform/goodix_ts.0/fod_pressed                u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/platform/goodix_ts.0/gesture/fp_wakeup          u:object_r:vendor_sysfs_sensors:s0
+
 # Grip Sensor
 genfscon proc /driver/grip_tap1_delta_release_force               u:object_r:proc_driver_grip_sensor:s0
 genfscon proc /driver/grip_tap1_slope_release_force               u:object_r:proc_driver_grip_sensor:s0
