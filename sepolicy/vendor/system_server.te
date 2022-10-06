@@ -13,3 +13,7 @@ allow system_server sysfs_tencent:file rw_file_perms;
 # Grip
 allow system_server GripCalService:fifo_file rw_file_perms;
 allow system_server GripCalService:fd use;
+
+# Thermal
+allow system_server vendor_thermal-engine:fd use;
+allow system_server vendor_thermal-engine:fifo_file { getattr write };

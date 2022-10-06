@@ -1,6 +1,16 @@
 # Factory files
-allow kernel factory_file:dir r_dir_perms;
-allow kernel factory_file:{file lnk_file} r_file_perms;
+allow kernel factory_file:dir search;
+allow kernel factory_file:file { read open };
 
 # Grip
 allow kernel GripCalService:fd use;
+
+allow kernel vendor_sysfs_battery_supply:file { read write open };
+allow kernel kernel:capability { chown kill };
+allow kernel sdcardfs:dir { write add_name search };
+allow kernel sdcardfs:file { read write create open };
+allow kernel storage_file:dir { write add_name search };
+allow kernel storage_file:lnk_file { read write create open };
+allow kernel tmpfs:dir { search };
+allow kernel mnt_user_file:dir { write add_name search };
+allow kernel mnt_user_file:lnk_file { read write create open };
