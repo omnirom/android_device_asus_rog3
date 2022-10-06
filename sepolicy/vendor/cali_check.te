@@ -1,0 +1,25 @@
+type cali_check, domain, halclientdomain;
+type cali_check_exec, exec_type, vendor_file_type, file_type;
+
+# Started by init
+init_daemon_domain(cali_check)
+
+allow cali_check mnt_vendor_file:dir { write add_name search};
+allow cali_check mnt_vendor_file:file { read getattr open};
+allow cali_check property_socket:sock_file { write};
+allow cali_check init:unix_stream_socket { connectto};
+allow cali_check vendor_toolbox_exec:file { read getattr map execute open execute_no_trans};
+allow cali_check storage_file:dir { search};
+allow cali_check storage_file:lnk_file { read};
+allow cali_check mnt_user_file:dir { search};
+allow cali_check mnt_user_file:lnk_file { read};
+allow cali_check sdcardfs:dir { search};
+allow cali_check sdcardfs:lnk_file { read};
+allow cali_check sdcardfs:file { read getattr open};
+allow cali_check media_rw_data_file:file { read getattr};
+allow cali_check vendor_proc_evt:file { write open};
+
+get_prop(cali_check, vendor_asus_prop)
+set_prop(cali_check, vendor_asus_prop)
+
+get_prop(cali_check, vendor_gx_fpd_prop)

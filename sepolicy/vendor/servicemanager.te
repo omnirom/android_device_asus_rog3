@@ -1,3 +1,7 @@
 allow servicemanager GripCalService:dir search;
 allow servicemanager GripCalService:file r_file_perms;
 allow servicemanager GripCalService:process getattr;
+
+allow servicemanager vendor_thermal-engine:dir search;
+allow servicemanager vendor_thermal-engine:file { read open };
+allow servicemanager vendor_thermal-engine:process getattr;

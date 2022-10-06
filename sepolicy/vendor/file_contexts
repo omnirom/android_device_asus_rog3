@@ -25,6 +25,9 @@
 # Bluetooth
 /(vendor|system/vendor)/bin/qcfwver                                                           u:object_r:asus_bluetooth_exec:s0
 
+# Display
+/(vendor|system/vendor)/bin/irisConfig                                                        u:object_r:iris_config_exec:s0
+
 # Game
 /sys/class/game_mode(/.*)?                                                                    u:object_r:sysfs_tencent:s0
 /sys/devices/virtual/game_mode(/.*)?                                                          u:object_r:sysfs_tencent:s0
@@ -44,6 +47,8 @@
 /dev/asusProxSensor                                                                           u:object_r:sensors_device:s0
 
 # Storage
+/(vendor|system/vendor)/bin/cali_check                                                        u:object_r:cali_check_exec:s0
+/(vendor|system/vendor)/bin/cali_shipping_check                                               u:object_r:cali_check_exec:s0
 /(vendor|system/vendor)/etc/storage_status.sh                                                 u:object_r:storage_check_exec:s0
 
 # Touch

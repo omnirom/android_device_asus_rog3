@@ -21,3 +21,7 @@ allow aura_sync vendor_aura_prop:property_service { set };
 allow aura_sync init:unix_stream_socket { connectto };
 allow aura_sync vendor_sysfs_graphics:dir { search };
 allow aura_sync vendor_sysfs_graphics:file { read write create open };
+allow aura_sync asusfw_file:file { read open};
+allow aura_sync asusfw_file:dir search;
+allow aura_sync mnt_vendor_file:file { read open};
+allow aura_sync mnt_vendor_file:dir search;
