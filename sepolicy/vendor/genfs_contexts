@@ -127,6 +127,17 @@ genfscon proc /driver/grip_swipe_v              u:object_r:proc_driver_grip_sens
 genfscon proc /driver/grip_tap_en               u:object_r:proc_driver_grip_sensor:s0
 genfscon proc /driver/grip_en                   u:object_r:proc_driver_grip_sensor:s0
 
+# Tecent
+genfscon sysfs /kernel/debug/ufshcd0/tx_Mbps                                                                                          u:object_r:sysfs_tencent:s0
+genfscon sysfs /kernel/debug/ufshcd0/rx_Mbps                                                                                          u:object_r:sysfs_tencent:s0
+
+# Touch
+genfscon sysfs /devices/platform/goodix_ts.0/airtrigger_touch                                                                         u:object_r:sysfs_touch:s0
+genfscon sysfs /devices/platform/goodix_ts.0/edge_settings                                                                            u:object_r:sysfs_touch:s0
+genfscon sysfs /devices/platform/goodix_ts.0/FP_status                                                                                u:object_r:sysfs_touch:s0
+genfscon sysfs /devices/platform/goodix_ts.0/game_settings                                                                            u:object_r:sysfs_touch:s0
+genfscon sysfs /devices/platform/goodix_ts.0/keymapping_touch                                                                         u:object_r:sysfs_touch:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/soc/soc:richtek,rt-charger/power_supply/rt-chg/wakeup                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:goodix_fp/goodix_fp/goodix_fp/wakeup                                                         u:object_r:sysfs_wakeup:s0

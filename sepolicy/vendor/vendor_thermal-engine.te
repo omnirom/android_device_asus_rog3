@@ -1,2 +1,7 @@
 get_prop(vendor_thermal-engine, asus_dongle_prop)
 set_prop(vendor_thermal-engine, asus_dongle_prop)
+
+allow vendor_thermal-engine mnt_vendor_file:dir { getattr search };
+
+allow vendor_thermal-engine proc:file {append open read write };
+allow vendor_thermal-engine asus_display_proc_exec:file r_file_perms;

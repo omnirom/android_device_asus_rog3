@@ -25,11 +25,12 @@
 # Bluetooth
 /(vendor|system/vendor)/bin/qcfwver                                                           u:object_r:asus_bluetooth_exec:s0
 
+# Display
+/(vendor|system/vendor)/bin/irisConfig                                                        u:object_r:iris_config_exec:s0
+
 # Game
 /sys/class/game_mode(/.*)?                                                                    u:object_r:sysfs_tencent:s0
 /sys/devices/virtual/game_mode(/.*)?                                                          u:object_r:sysfs_tencent:s0
-/sys/kernel/debug/ufshcd0/tx_Mbps                                                             u:object_r:sysfs_tencent:s0
-/sys/kernel/debug/ufshcd0/rx_Mbps                                                             u:object_r:sysfs_tencent:s0
 
 # Hid
 /dev/hidraw.*                                                                                 u:object_r:hid_device:s0
@@ -44,14 +45,11 @@
 /dev/asusProxSensor                                                                           u:object_r:sensors_device:s0
 
 # Storage
+/(vendor|system/vendor)/bin/cali_check                                                        u:object_r:cali_check_exec:s0
+/(vendor|system/vendor)/bin/cali_shipping_check                                               u:object_r:cali_check_exec:s0
 /(vendor|system/vendor)/etc/storage_status.sh                                                 u:object_r:storage_check_exec:s0
 
 # Touch
-/sys/devices/platform/goodix_ts.0/airtrigger_touch                                            u:object_r:sysfs_touch:s0
-/sys/devices/platform/goodix_ts.0/keymapping_touch                                            u:object_r:sysfs_touch:s0
-/sys/devices/platform/goodix_ts.0/game_settings                                               u:object_r:sysfs_touch:s0
-/sys/devices/platform/goodix_ts.0/edge_settings                                               u:object_r:sysfs_touch:s0
-/sys/devices/platform/goodix_ts.0/FP_status                                                   u:object_r:sysfs_touch:s0
 /(vendor|system/vendor)/bin/touch_cfg.sh                                                      u:object_r:asus_touch_exec:s0
 
 # UDFPS
