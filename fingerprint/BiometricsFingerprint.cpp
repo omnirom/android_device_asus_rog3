@@ -32,7 +32,7 @@
 #define CMD_LIGHT_AREA_STABLE 200002
 #define CMD_PARTIAL_FINGER_DETECTED 200004
 
-#define FOD_EVENT_PATH "/proc/driver/fod_event"
+#define TEST_KEYCODE_PATH "/sys/devices/platform/goodix_ts.0/test_keycode"
 #define FOD_WAKEUP_EVENT "33"
 
 #define LOCAL_HBM_PATH "/proc/localHbm"
@@ -85,7 +85,7 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
     mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_DOWN, {},
                                                 [](int, const hidl_vec<signed char>&) {});
-    android::base::WriteStringToFile(FOD_WAKEUP_EVENT, FOD_EVENT_PATH);
+    android::base::WriteStringToFile(FOD_WAKEUP_EVENT, TEST_KEYCODE_PATH);
     android::base::WriteStringToFile(LOCAL_HBM_ON, LOCAL_HBM_PATH);
     mGoodixFingerprintDaemon->sendCommand(CMD_LIGHT_AREA_STABLE, {},
                                                 [](int, const hidl_vec<signed char>&) {});
