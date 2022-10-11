@@ -49,7 +49,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/eGalaxTouch_EXC3200.idc:system/usr/idc/eGalaxTouch_EXC3200.idc \
     $(LOCAL_PATH)/keychars/goodix_ts.kcm:system/usr/keychars/goodix_ts.kcm \
     $(LOCAL_PATH)/keylayout/goodix_ts.kl:system/usr/keylayout/goodix_ts.kl \
-    $(LOCAL_PATH)/keylayout/i-rocks_Bluetooth_Keyboard.kl:system/usr/keylayout/i-rocks_Bluetooth_Keyboard.kl
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/Vendor_0cf2_Product_7750.kl:system/usr/keylayout/Vendor_0cf2_Product_7750.kl
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
