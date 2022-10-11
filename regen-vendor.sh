@@ -649,6 +649,12 @@ VENDOR_SKIP_FILES_COMMON=(
 
     # Sensors
     "etc/sensors/hals.conf"
+    "bin/hw/android.hardware.sensors@2.0-service.multihal"
+    "etc/init/android.hardware.sensors@2.0-service-multihal.rc"
+    "etc/vintf/manifest/android.hardware.sensors@2.0-multihal.xml"
+    "lib/android.hardware.sensors@2.0-ScopedWakelock.so"
+    "lib64/android.hardware.sensors@2.0-ScopedWakelock.so"
+    "lib64/libsensorndkbridge.so"
 
     # Sepolicy
     "etc/selinux/plat_pub_versioned.cil"
@@ -749,7 +755,6 @@ as_module "etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.
 as_module "etc/vintf/manifest/android.hardware.lights-qti.xml"
 as_module "etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml"
 as_module "etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml"
-as_module "etc/vintf/manifest/android.hardware.sensors@2.0-multihal.xml"
 as_module "etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml"
 as_module "etc/vintf/manifest/android.hardware.usb@1.2-service.xml"
 as_module "etc/vintf/manifest/android.hardware.wifi.hostapd.xml"
