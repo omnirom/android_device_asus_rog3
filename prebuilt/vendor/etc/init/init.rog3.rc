@@ -9,6 +9,7 @@ service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@
 
 service vendor.qti.hardware.display.composer /vendor/bin/hw/vendor.qti.hardware.display.composer-service
     override
+    interface android.hardware.graphics.composer@2.1::IComposer default
     class hal animation
     user system
     group graphics drmrpc
