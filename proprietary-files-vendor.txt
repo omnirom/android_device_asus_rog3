@@ -310,6 +310,7 @@ vendor/etc/audio_platform_info.xml
 vendor/etc/audio_platform_info_intcodec.xml
 vendor/etc/audio_platform_info_intcodec_ZS661KS.xml
 vendor/etc/audio_platform_info_qrd.xml
+vendor/etc/audio_tuning_mixer.txt
 vendor/etc/aura_sync_fw_update.sh
 vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
 vendor/etc/camera/camxoverridesettings.txt

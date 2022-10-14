@@ -63,7 +63,6 @@ VENDOR_SKIP_FILES_COMMON=(
     "etc/audio_policy_configuration_ZS661KS.xml"
     "etc/audio_policy_volumes.xml"
     "etc/audio_policy_volumes_ZS661KS.xml"
-    "etc/audio_tuning_mixer.txt"
     "etc/bluetooth_qti_audio_policy_configuration.xml"
     "bin/hw/android.hardware.audio.service"
     "etc/init/android.hardware.audio.service.rc"
