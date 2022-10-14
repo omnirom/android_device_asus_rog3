@@ -244,7 +244,6 @@ system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
 -product/app/DeviceStatisticsService/DeviceStatisticsService.apk
 
 # Display
--priv-app/AsusVisualMaster/AsusVisualMaster.apk
 product/etc/permissions/com.qti.snapdragon.sdk.display.xml
 -product/framework/com.qti.snapdragon.sdk.display.jar
 -system_ext/app/colorservice/colorservice.apk

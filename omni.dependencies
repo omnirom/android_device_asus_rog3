@@ -10,5 +10,18 @@
     "repository": "android_kernel_asus_rog3",
     "target_path": "kernel/asus/rog3",
     "revision": "android-13.0"
-  }
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_hardware_qcom_display",
+    "target_path": "hardware/qcom-caf/sm8250/display",
+    "override": "platform/hardware/qcom/display",
+    "revision": "lineage-20.0-caf-sm8250"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_thermal-engine",
+    "target_path": "vendor/qcom/opensource/thermal-engine",
+    "revision": "lineage-20.0"
+   }
 ]
