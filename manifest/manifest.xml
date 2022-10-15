@@ -277,16 +277,6 @@
         <fqname>@1.2::IAirTrigger/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.ims.colortemp</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IColorTemp</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IColorTemp/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.ims.wifiantennamode</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

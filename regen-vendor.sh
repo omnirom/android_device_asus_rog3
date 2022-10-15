@@ -772,6 +772,9 @@ VENDOR_SKIP_FILES_COMMON=(
     "lib64/libpwsnapdragoncolor.so"
     "lib/vendor.pixelworks.hardware.display@1.0.so"
     "lib64/vendor.pixelworks.hardware.display@1.0.so"
+    "bin/hw/vendor.ims.colortemp@1.0-service"
+    "etc/init/vendor.ims.colortemp@1.0-service.rc"
+    "lib64/vendor.ims.colortemp@1.0.so"
 
     # Health
     "bin/hw/android.hardware.health@2.1-service"

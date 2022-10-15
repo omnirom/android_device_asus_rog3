@@ -239,14 +239,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl" optional="false">
-        <name>vendor.ims.colortemp</name>
-        <version>1.0</version>
-        <interface>
-            <name>IColorTemp</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="false">
         <name>vendor.ims.wifiantennamode</name>
         <version>1.0</version>
         <interface>

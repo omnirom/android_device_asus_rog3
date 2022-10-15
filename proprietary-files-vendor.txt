@@ -127,7 +127,6 @@ vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/qcrild
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/hw/vendor.ims.airtrigger@1.2-service
-vendor/bin/hw/vendor.ims.colortemp@1.0-service
 vendor/bin/hw/vendor.ozoaudio.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
@@ -461,7 +460,6 @@ vendor/etc/init/slad.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/init/vendor.ims.airtrigger@1.2-service.rc
-vendor/etc/init/vendor.ims.colortemp@1.0-service.rc
 vendor/etc/init/vendor.ozoaudio.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.adsprpc-service.rc
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
@@ -2492,7 +2490,6 @@ vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.ims.airtrigger@1.0.so
 vendor/lib64/vendor.ims.airtrigger@1.1.so
 vendor/lib64/vendor.ims.airtrigger@1.2.so
-vendor/lib64/vendor.ims.colortemp@1.0.so
 vendor/lib64/vendor.nxp.eventprocessor@1.0.so
 vendor/lib64/vendor.nxp.nxpese@1.0.so
 vendor/lib64/vendor.nxp.nxpnfc@2.0.so
