@@ -827,6 +827,7 @@ VENDOR_SKIP_FILES_COMMON=(
     "bin/init.asus.check_asdf.sh"
     "bin/init.asus.check_last.sh"
     "bin/init.asus.checkdevcfg.sh"
+    "bin/init.qcom.sh"
     "etc/init/init.asus.user.rc"
     "etc/init/hw/init.asus.debugtool.rc"
     "etc/init/hw/init.qcom.rc"
