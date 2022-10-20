@@ -14,6 +14,9 @@ allow system_server sysfs_tencent:file rw_file_perms;
 allow system_server GripCalService:fifo_file rw_file_perms;
 allow system_server GripCalService:fd use;
 
+# Fingerprint press with DeviceParts
+allow system_server asus_display_proc_exec:file rw_file_perms;
+
 # Thermal
 allow system_server vendor_thermal-engine:fd use;
 allow system_server vendor_thermal-engine:fifo_file { getattr write };
