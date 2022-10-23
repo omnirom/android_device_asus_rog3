@@ -77,24 +77,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.obiwan
 
-# Media/Omx
-PRODUCT_PACKAGES += \
-    init.qti.media.sh \
-    libc2dcolorconvert \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
-    libmm-omxcore \
-    libOmxCore \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libOmxVidcCommon \
-    libstagefrighthw
-
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/system,system) \

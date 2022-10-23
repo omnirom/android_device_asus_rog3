@@ -23,12 +23,5 @@
     "repository": "LineageOS/android_vendor_qcom_opensource_thermal-engine",
     "target_path": "vendor/qcom/opensource/thermal-engine",
     "revision": "lineage-20.0"
-   },
-   {
-    "remote": "github",
-    "repository": "LineageOS/android_hardware_qcom_media",
-    "target_path": "hardware/qcom-caf/sm8250/media",
-    "override": "platform/hardware/qcom/media",
-    "revision": "lineage-20.0-caf-sm8250"
-  }
+   }
 ]
