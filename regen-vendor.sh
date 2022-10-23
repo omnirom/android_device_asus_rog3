@@ -1223,5 +1223,3 @@ as_module "etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml"
 
 as_module "lib/libthermalclient.so"
 as_module "lib64/libthermalclient.so"
-as_module "lib/libfastcvopt.so"
-as_module "lib64/libfastcvopt.so"

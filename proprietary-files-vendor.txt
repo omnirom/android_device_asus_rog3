@@ -1454,7 +1454,7 @@ vendor/lib/libdsutils.so
 vendor/lib/libexthwplugin.so
 vendor/lib/libfastcrc.so
 vendor/lib/libfastcvdsp_stub.so
--vendor/lib/libfastcvopt.so
+vendor/lib/libfastcvopt.so
 vendor/lib/libgarden.so
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
@@ -2158,7 +2158,7 @@ vendor/lib64/libdsutils.so
 vendor/lib64/libembmsservice.so
 vendor/lib64/libexthwplugin.so
 vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 vendor/lib64/libgameoptfeature.so
 vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so
