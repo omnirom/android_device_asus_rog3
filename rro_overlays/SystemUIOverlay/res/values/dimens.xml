@@ -18,5 +18,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- the padding on the start of the statusbar -->
+    <dimen name="status_bar_padding_start">62.5px</dimen>
+
     <dimen name="keyguard_indication_margin_bottom">50dp</dimen>
 </resources>
