@@ -151,3 +151,4 @@ genfscon sysfs /devices/platform/soc/c84000.i2c/i2c-7/7-004e/tcpc/type_c_port0/d
 genfscon sysfs /devices/platform/soc/89c000.i2c/i2c-2/2-0028/wakeup                                                                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c84000.i2c/i2c-7/7-005e/power_supply/pca9468-mains/wakeup28                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:station_keys_asus/wakeup                                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,ipa_uc/wakeup                                                                           u:object_r:sysfs_wakeup:s0
