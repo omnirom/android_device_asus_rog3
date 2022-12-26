@@ -967,6 +967,12 @@ VENDOR_SKIP_FILES_COMMON=(
     "app/TimeService/oat/arm64/TimeService.vdex"
     "app/ifaa_service/oat/arm64/ifaa_service.odex"
     "app/ifaa_service/oat/arm64/ifaa_service.vdex"
+    "lib/vendor.qti.hardware.perf@2.0.so"
+    "lib/vendor.qti.hardware.perf@2.1.so"
+    "lib/vendor.qti.hardware.perf@2.2.so"
+    "lib64/vendor.qti.hardware.perf@2.0.so"
+    "lib64/vendor.qti.hardware.perf@2.1.so"
+    "lib64/vendor.qti.hardware.perf@2.2.so"
 
     # Overlays
     "overlay/FrameworksResTarget.apk"
