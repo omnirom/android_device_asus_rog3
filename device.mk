@@ -87,9 +87,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# kernel headers
-PRODUCT_VENDOR_KERNEL_HEADERS += $(LOCAL_PATH)/kernel-headers
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
