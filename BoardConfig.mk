@@ -87,9 +87,6 @@ TARGET_MODULE_ALIASES := \
     wlan.ko:qca_cld3_qca6390.ko \
     wsa_macro_dlkm.ko:audio_wsa_macro.ko
 
-# Platform
-QCOM_HARDWARE_VARIANT := sm8250
-
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
