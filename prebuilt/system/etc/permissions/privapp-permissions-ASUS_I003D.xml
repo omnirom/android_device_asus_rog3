@@ -46,4 +46,8 @@
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
     </privapp-permissions>
 
+    <privapp-permissions package="se.dirac.acs">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+    </privapp-permissions>
+
 </permissions>

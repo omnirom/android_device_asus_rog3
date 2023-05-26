@@ -49,6 +49,11 @@ ro.vendor.btmac                                             u:object_r:asus_blue
 vendor.bt.version.driver                                    u:object_r:asus_bluetooth_prop:s0
 vendor.bluetooth.status                                     u:object_r:log_prop:s0
 
+# Dirac
+persist.vendor.dirac.                                       u:object_r:vendor_asus_prop:s0
+ro.vendor.dirac.                                            u:object_r:vendor_asus_prop:s0
+vendor.dirac.                                               u:object_r:vendor_asus_prop:s0
+
 # Display
 vendor.asus.dfps                                            u:object_r:vendor_dfps_prop:s0
 vendor.asus.rfps                                            u:object_r:vendor_display_prop:s0
