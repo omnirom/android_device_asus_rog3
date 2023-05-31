@@ -42,14 +42,6 @@ system_ext/lib64/libcdsprpc_system.so
 system_ext/lib64/libmdsprpc_system.so
 system_ext/lib64/libsdsprpc_system.so
 
-# Battery
-etc/permissions/asus.software.marketapp.xml
--app/MobileManagerService/MobileManagerService.apk
--priv-app/MobileManager/MobileManager.apk
-priv-app/MobileManager/lib/arm64/libavast-utils.so
-priv-app/MobileManager/lib/arm64/libavast-vps-interface.so
-#-priv-app/PowerSaving2/PowerSaving2.apk
-
 # Bluetooth
 system_ext/etc/permissions/audiosphere.xml
 -system_ext/framework/audiosphere.jar
