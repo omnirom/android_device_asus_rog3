@@ -5,3 +5,6 @@ allow vendor_thermal-engine mnt_vendor_file:dir { getattr search };
 
 allow vendor_thermal-engine proc:file {append open read write };
 allow vendor_thermal-engine asus_display_proc_exec:file r_file_perms;
+
+allow vendor_thermal-engine sysfs:file getattr;
+allow vendor_thermal-engine sysfs:lnk_file getattr;

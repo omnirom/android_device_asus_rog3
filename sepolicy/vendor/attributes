@@ -2,6 +2,9 @@
 attribute hal_airtrigger;
 attribute hal_airtrigger_client;
 attribute hal_airtrigger_server;
+expandattribute hal_airtrigger true;
+expandattribute hal_airtrigger_client true;
+expandattribute hal_airtrigger_server false;
 
 # Pixelworks (display)
 attribute hal_display_iris;

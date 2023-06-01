@@ -1,5 +1,5 @@
 # Airtrigger
-binder_call(system_app, hal_airtrigger_default)
+allow system_app hal_airtrigger_default:binder call;
 allow system_app hal_airtrigger_hwservice:hwservice_manager find;
 
 # Asus Bt

@@ -1,5 +1,5 @@
 # Airtrigger & Grip
-/(vendor|system/vendor)/bin/hw/vendor\.ims\.airtrigger@[0-9]\.[0-9]-service                   u:object_r:hal_airtrigger_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.ims\.airtrigger@[0-9]+\.[0-9]+-service                 u:object_r:hal_airtrigger_default_exec:s0
 /(vendor|system/vendor)/bin/grip_cal.sh                                                       u:object_r:GripCalService_exec:s0
 /(vendor|system/vendor)/bin/grip_fpc_check.sh                                                 u:object_r:vendor_thermal-engine_exec:s0
 /(vendor|system/vendor)/bin/init.asus.thermal_conf.sh                                         u:object_r:vendor_thermal-engine_exec:s0
